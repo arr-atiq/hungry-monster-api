@@ -1,7 +1,6 @@
 const searchBtn = document.getElementById("meal-btn");
 const allMeal = document.getElementById("all-meal-section");
 const popUpCloseBtn = document.getElementById("recipe-close");
-const getDetailBtn = document.getElementById("getDetail-btn");
 const mealDetailContent = document.querySelector(".meal-detail-content");
 
 searchBtn.addEventListener('click', function () {
@@ -14,11 +13,10 @@ searchBtn.addEventListener('click', function () {
                 data.meals.forEach(meal => {
                     html += `<div class="meal-item" data-id = "${meal.idMeal}">
                                 <div class="meal-img">
-                                 <img src="${meal.strMealThumb}" alt="">
+                                 <img src="${meal.strMealThumb}" class="click-item" alt="">
                                 </div>
                                 <div class="meal-name">
                                   <h3>${meal.strMeal}</h3>
-                                  <a href="#" class="food-btn" id ="getDetail-btn">Get Details</a>
                                 </div>
                             </div>`;
                 });
@@ -33,14 +31,14 @@ searchBtn.addEventListener('click', function () {
 
 allMeal.addEventListener('click', function(e){
     e.preventDefault();
-    if(e.target.classList.contains('food-btn')){
+    if(e.target.classList.contains('click-item')){
         let mealItem = e.target.parentElement.parentElement;
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
         .then(res => res.json())
-        .then(data => mealRecipeModal(data.meals));
+        .then(data => mealShowModal(data.meals));
     }
 })
-function mealRecipeModal(meal){
+function mealShowModal(meal){
     meal = meal[0];
     let html = `<h2 class="meal-title">${meal.strMeal}</h2>
                 <p class="meal-category">${meal.strCategory}</p>
