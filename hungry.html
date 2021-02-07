@@ -1,15 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <title>Hungry Monster</title>
     <link rel="stylesheet" href="hungry.css">
 </head>
+
 <body>
-    <div id="dish-image">
-        
+    <div id="container">
+        <div class="main-area">
+            <div class="search-area">
+                <div class="search-box">
+                    <input type="text" class="search-item" placeholder="Enter an Ingredient">
+                    <button type="submit" class="input-btn" id="meal-btn">Search</button>
+                </div>
+            </div>
+            <div class="meal-result">
+                <h2 id="title">Your Search Result:</h2>
+                <div class="all-meal" id="all-meal-section">
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="beef.png" alt="">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Beef</h3>
+                            <a href="#" class="food-btn">Get Details</a>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="beef.png" alt="">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Beef</h3>
+                            <a href="#" class="food-btn">Get Details</a>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="beef.png" alt="">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Beef</h3>
+                            <a href="#" class="food-btn">Get Details</a>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="beef.png" alt="">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Beef</h3>
+                            <a href="#" class="food-btn">Get Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="meal-detail">
+                <button type="button" class="btn recipe-close-btn" id="recipe-close">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+                <div class="meal-detail-content">
+                    <h2 class="meal-title">Meals Name Here</h2>
+                    <p class="meal-category">Category Name</p>
+                    <div class="meal-description">
+                        <h3>Description:</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta reprehenderit aspernatur ipsa dolorum facilis inventore voluptates voluptatum tempore nostrum laudantium veritatis dolorem earum cum beatae impedit delectus molestias corrupti esse, eaque pariatur iste officia neque? Ea ad quibusdam blanditiis quas rem quisquam omnis voluptate facilis. Quae provident pariatur vero totam maiores quasi numquam? In mollitia dolore quis vel molestiae maiores, exercitationem dolorum perspiciatis? Cupiditate doloremque ea aut eum, delectus temporibus, modi exercitationem cum fuga cumque et repellat nobis non quos aspernatur corporis laboriosam quas officiis incidunt. Aliquam quasi obcaecati repellendus repellat esse ab, maiores voluptatibus nihil, doloribus libero aspernatur quas.</p>
+                    </div>
+                    <div class="meal-img-popup">
+                        <img src="beef.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="hungry.js"></script>
 </body>
+
 </html>
