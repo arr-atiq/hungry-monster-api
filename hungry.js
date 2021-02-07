@@ -23,6 +23,7 @@ searchBtn.addEventListener('click', function () {
                 });
             }else{
                 html = "Sorry, We didn't find any meal";
+                allMeal.classList.add('notFound');
             }
             allMeal.innerHTML = html;
         });

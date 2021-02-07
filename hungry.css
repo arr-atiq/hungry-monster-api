@@ -68,6 +68,13 @@ body{
     background-color: blue;
     color: white
 }
+.notFound{
+    grid-template-columns: 1fr!important;
+    color: crimson;
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 100%;
+}
 .meal-detail{
     position: fixed;
     top: 10%;
