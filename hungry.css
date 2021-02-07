@@ -41,15 +41,20 @@ body{
 .all-meal{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    
 }
 .meal-item{
     overflow: hidden;
     margin-top: 100px;
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 79);
     width: 400px;
+    
 }
 .meal-img img{
     margin: 0 auto;
+    width: 300px;
+    height: 250px;
     /* display: block; */
 }
 .food-btn{
